@@ -1,7 +1,7 @@
 # 👋 ¡Hola, soy Joel B.Baez!  
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=4000&pause=500&color=F7B93E&center=true&vCenter=true&width=500&lines=Bienvenido+a+mi+perfil+de+GitHub!;Desarrollador+%7C+Innovador+%7C+Aprendiz;Explora+mis+proyectos+y+colabora+conmigo!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=4000&pause=500&color=F7B93E&center=true&vCenter=true&width=500&lines=Bienvenido+a+mi+perfil+de+GitHub!;Desarrollador+%7C+Innovador+%7C+Aprendiz;Explora+mis+proyectos!" alt="Typing SVG" />
 </p>
 
 ---
