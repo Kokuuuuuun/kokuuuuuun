@@ -91,7 +91,7 @@ _Descripción breve del proyecto_: plataforma de gestión académica y administr
   <a href="https://twitter.com/tuUsuario" target="_blank">
     <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>
-  <a href="https://joeldev-portafolo.netlify.app/" target="_blank">
+  <a href="https://joeldev-portafolio.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portafolio-%23f39c12.svg?&style=for-the-badge&logo=Firefox&logoColor=white" alt="Portafolio" />
   </a>
 </p>
