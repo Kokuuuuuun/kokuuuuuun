@@ -7,7 +7,7 @@
 ---
 
 ## 🛠️ Sobre Mí  
-Soy un **desarrollador web** apasionado por **Crear proyectos innovadores y complejos**. Mi enfoque principal está en **Los lenguajes frontend y backend como css y java** y disfruto trabajar en proyectos que generan un impacto positivo.  
+Soy un **desarrollador** apasionado por **Crear proyectos innovadores y complejos**. Mi enfoque principal está en **Los lenguajes frontend y backend como css y java** y disfruto trabajar en proyectos que generan un impacto positivo.  
 
 ---
 ## 🛠️ Tecnologías y Herramientas  
