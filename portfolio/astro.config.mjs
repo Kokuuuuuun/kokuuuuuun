@@ -4,6 +4,6 @@ export default defineConfig({
   output: 'static',
   vite: {
     server: { allowedHosts: ['localhost'] },
-    optimizeDeps: { exclude: ['gsap', 'gsap/ScrollTrigger'] },
+    optimizeDeps: { exclude: ['gsap', 'gsap/ScrollTrigger', 'gsap/Flip'] },
   },
 });
