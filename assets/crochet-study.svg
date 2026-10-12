@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Crochet — pattern study</title>
+  <desc id="desc">An illustrative stitch grid with a flower, using olive and warm orange accents.</desc>
+  <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#d5d6c8" stroke-width=".8"/></pattern></defs>
+  <rect width="600" height="220" rx="6" fill="#e9e9de"/>
+  <g transform="translate(310 30)">
+    <rect width="240" height="160" fill="url(#grid)"/>
+    <g font-family="monospace" font-size="21" fill="#79835c" text-anchor="middle">
+      <text x="120" y="38">× × ×</text><text x="120" y="58">× × × × ×</text>
+      <text x="120" y="78">× × × × × × ×</text><text x="120" y="98">× × × × × × ×</text>
+      <text x="120" y="118">× × × × ×</text><text x="120" y="138">× × ×</text>
+    </g>
+    <rect x="100" y="60" width="20" height="20" fill="#b67650" opacity=".35"><animate attributeName="opacity" values=".15;.55;.15" dur="5s" repeatCount="indefinite"/></rect>
+  </g>
+  <g font-family="monospace" fill="#646c54"><text x="30" y="40" font-size="10" letter-spacing="2">PATTERN STUDY / 01</text><text x="30" y="192" font-size="9">DRAW. COUNT. REPEAT.</text></g>
+  <text x="28" y="120" font-family="Georgia,serif" font-size="70" font-style="italic" fill="#596445">rc.</text>
+</svg>

@@ -15,12 +15,14 @@ I'm Joel, a full stack developer from the Dominican Republic. I work on web and 
 <table>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/Kokuuuuuun/crochet"><img src="./assets/crochet-study.svg" width="100%" alt="Crochet pattern illustration: a flower drawn with stitch symbols." /></a>
       <sub>01 / DESKTOP APP</sub>
       <h3><a href="https://github.com/Kokuuuuuun/crochet">Crochet ↗</a></h3>
       <p>An offline crochet app with a visual pattern editor, row counters, yarn inventory, and local storage.</p>
       <p><samp>TypeScript · Next.js · Electron · SQLite</samp></p>
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/Kokuuuuuun/Mihon-desktop"><img src="./assets/mihon-study.svg" width="100%" alt="Mihon Desktop illustration: three original abstract book covers." /></a>
       <sub>02 / OPEN SOURCE FORK</sub>
       <h3><a href="https://github.com/Kokuuuuuun/Mihon-desktop">Mihon Desktop ↗</a></h3>
       <p>My desktop fork of <a href="https://github.com/mihonapp/mihon">Mihon</a>. A manga reader for Linux using Compose Multiplatform and an embedded Suwayomi server.</p>

@@ -1,0 +1,122 @@
+---
+import { profile, projects, technologies } from '../data/profile';
+import '../styles/global.css';
+const [crochet, mihon] = projects;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Joel B. Báez — full stack developer from the Dominican Republic. Web and desktop apps, Crochet, and Mihon Desktop." />
+    <meta name="theme-color" content="#f5f3ed" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Joel Báez — web, desktop & a little curiosity</title>
+    <script is:inline>
+      try { if (localStorage.getItem('joel-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-progress" aria-hidden="true"></div>
+    <header class="nav-wrap">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="wordmark" href="#main" aria-label="Joel, back to top">jb<span>.</span></a>
+        <div class="nav-links"><a href="#work">Work <span>02</span></a><a href="#about">About</a><a href="#toolkit">Toolkit</a></div>
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Switch to dark theme" title="Change theme"><span class="theme-symbol" aria-hidden="true">◐</span></button>
+          <a class="github-link" href={profile.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero shell" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow hero-enter"><span class="tiny-cross" aria-hidden="true">✳</span> JOEL B. BÁEZ <span class="muted">/ KOKUUUUUUN</span></p>
+          <h1 id="intro-title" class="hero-enter">Full stack.<br /><em>Full of</em><br />curiosity<span class="orange">.</span></h1>
+          <p class="hero-description hero-enter">I make web and desktop apps.<br />Currently, a crochet workspace and<br class="desktop-break" /> a manga reader for Linux.</p>
+          <a class="text-link hero-enter" href="#work">Take a look around <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="thread-study hero-enter">
+          <div class="study-top"><span class="mono">THREAD STUDY / 001</span><span class="study-mark" aria-hidden="true">↖↗</span></div>
+          <canvas id="thread-canvas" aria-label="Interactive three-dimensional thread knot. Move your pointer over it or adjust the tension below." role="img"></canvas>
+          <div class="study-controls">
+            <div><span class="study-caption">Everything starts with a thread.</span><span class="study-hint">Move your cursor. See what happens.</span></div>
+            <button class="reset-thread" aria-label="Reset thread tension" title="Reset thread">↺</button>
+          </div>
+          <label class="tension-label"><span class="mono">TENSION</span><input id="tension" type="range" min="0" max="100" value="45" /><span class="mono" id="tension-value">45</span></label>
+        </div>
+        <div class="hero-bottom"><span><span class="status-dot"></span> BASED IN THE DOMINICAN REPUBLIC</span><span>WEB / DESKTOP / OPEN SOURCE</span><span class="scroll-label">SCROLL TO EXPLORE ↓</span></div>
+      </section>
+
+      <section id="work" class="work shell section-block" aria-labelledby="work-title">
+        <div class="section-heading reveal"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">From my<br /><em>workbench.</em></h2></div><p>Two projects I'd rather show<br />than write a long bio about.</p></div>
+        <article class="project project-crochet reveal">
+          <div class="project-visual crochet-visual">
+            <div class="mini-window">
+              <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Rincón del Crochet</span><span class="window-indicator">LOCAL</span></div>
+              <div class="crochet-demo">
+                <div class="crochet-sidebar" aria-hidden="true"><b>rc.</b><span class="active">▦</span><span>≋</span><span>◉</span><span>⌁</span></div>
+                <div class="pattern-body">
+                  <div class="pattern-header"><div><span class="mini-label">PATTERN EDITOR</span><h3>A little flower.</h3></div><span class="pattern-icon" aria-hidden="true">✳</span></div>
+                  <div class="stitch-grid" role="group" aria-label="Interactive crochet pattern demo. Use arrow keys to move and Space to toggle a stitch.">
+                    {Array.from({length: 80}, (_, i) => <button class="stitch" data-cell={i} aria-label={`Toggle stitch row ${Math.floor(i / 10) + 1}, column ${i % 10 + 1}`} aria-pressed="false"></button>)}
+                  </div>
+                  <div class="pattern-bottom"><span><b id="stitch-count">0</b> stitches <span class="mini-muted">/ click to draw</span></span><button id="clear-pattern">Clear ↺</button></div>
+                </div>
+              </div>
+            </div>
+            <span class="visual-caption">INTERACTIVE UI STUDY · NOT A PRODUCT SCREENSHOT</span>
+          </div>
+          <div class="project-copy"><span class="project-number">01 — DESKTOP APPLICATION</span><h3>{crochet!.name}</h3><p>{crochet!.description}</p><div class="project-tags">{crochet!.stack.map(tag => <span>{tag}</span>)}</div><div class="project-links"><button class="text-link" data-project="crochet">Project notes <span aria-hidden="true">↗</span></button><a href={crochet!.repo} target="_blank" rel="noreferrer">Source code ↗</a></div></div>
+        </article>
+        <article class="project project-mihon reveal">
+          <div class="project-visual mihon-visual">
+            <div class="mini-window reader-window">
+              <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Mihon Desktop</span><span class="window-indicator">LINUX</span></div>
+              <div class="reader-demo">
+                <div class="reader-sidebar"><span class="reader-monogram" aria-hidden="true">m.</span><span class="reader-active">Library</span><span>Browse</span><span>History</span></div>
+                <div class="reader-body"><div class="reader-heading"><h3>Your next chapter.</h3><span>03</span></div>
+                  <div class="book-shelf" role="group" aria-label="Reader cover studies">
+                    <button class="book book-one selected" data-book="0" aria-pressed="true" aria-label="Select cover study one"><span class="book-art"><i></i><i></i><i></i></span><span class="book-caption">STUDY 01</span></button>
+                    <button class="book book-two" data-book="1" aria-pressed="false" aria-label="Select cover study two"><span class="book-art"><i></i><i></i></span><span class="book-caption">STUDY 02</span></button>
+                    <button class="book book-three" data-book="2" aria-pressed="false" aria-label="Select cover study three"><span class="book-art"><i></i><i></i><i></i></span><span class="book-caption">STUDY 03</span></button>
+                  </div>
+                  <div class="reader-bottom"><span id="reader-selection" aria-live="polite">Study 01 selected</span><span class="mini-muted">Pick a cover ↑</span></div>
+                </div>
+              </div>
+            </div>
+            <span class="visual-caption">INTERACTIVE UI STUDY · ORIGINAL COVER ART</span>
+          </div>
+          <div class="project-copy"><span class="project-number">02 — OPEN SOURCE FORK</span><h3>{mihon!.name}</h3><p>{mihon!.description}</p><div class="project-tags">{mihon!.stack.map(tag => <span>{tag}</span>)}</div><div class="project-links"><button class="text-link" data-project="mihon">Project notes <span aria-hidden="true">↗</span></button><a href={mihon!.repo} target="_blank" rel="noreferrer">Source code ↗</a></div><p class="fork-credit">An independent fork of <a href="https://github.com/mihonapp/mihon" target="_blank" rel="noreferrer">Mihon</a>. Credit to the original contributors.</p></div>
+        </article>
+        <div class="work-end reveal"><span class="mono">THERE'S MORE IN THE REPOSITORIES.</span><a class="text-link" href={profile.github + '?tab=repositories'} target="_blank" rel="noreferrer">All projects <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section id="about" class="about section-block">
+        <div class="shell about-grid"><div class="reveal"><p class="eyebrow">02 / THE HUMAN PART</p><h2>Joel, outside<br /><em>the editor.</em></h2></div>
+          <div class="about-copy reveal"><p>I'm a full stack developer from the Dominican Republic. I work across interfaces, backend logic, databases, and desktop apps.</p><p>I also spend time in Figma and Blender, explore AI tools, and try frameworks when a project gives me a reason to. Crochet and Mihon Desktop are two of those rabbit holes.</p><div class="about-footnote"><span class="small-monogram">jb.</span><span class="mono">JOEL B. BÁEZ<br /><span class="muted">@KOKUUUUUUN</span></span></div></div>
+        </div>
+      </section>
+
+      <section id="toolkit" class="toolkit shell section-block" aria-labelledby="toolkit-title">
+        <div class="section-heading reveal"><div><p class="eyebrow">03 / TOOLKIT</p><h2 id="toolkit-title">Different tools.<br /><em>Different jobs.</em></h2></div><p>The languages, frameworks, and tools<br />I work with and explore.</p></div>
+        <div class="toolkit-content reveal">
+          <div class="tool-filters" role="group" aria-label="Filter technologies">{Object.keys(technologies).map((group, i) => <button data-filter={group} class={i === 0 ? 'active' : ''} aria-pressed={i === 0}>{group}<span>{technologies[group]!.length.toString().padStart(2, '0')}</span></button>)}</div>
+          <div id="tool-list" class="tool-list" aria-live="polite">{technologies.Languages!.map((tool, i) => <div class="tool-item"><span class="mono">{(i + 1).toString().padStart(2, '0')}</span><span>{tool}</span><span class="tool-plus" aria-hidden="true">+</span></div>)}</div>
+        </div>
+        <noscript><p>Frontend: React, Next.js, Svelte, Astro, Tailwind. Backend: Node.js, Express, Django. Data: MySQL, MongoDB, SQLite, Redis. Tools: AWS, Docker, Git, Electron, Figma, Blender.</p></noscript>
+      </section>
+
+      <footer class="footer"><div class="shell"><div class="footer-top reveal"><p class="eyebrow">THAT'S ME, FOR NOW.</p><a href={profile.github} target="_blank" rel="noreferrer">Say hello<span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span class="mono">JOEL B. BÁEZ / {new Date().getFullYear()}</span><span class="mono">MADE WITH ASTRO. AND A LITTLE PATIENCE.</span><a href="#main">Back to top ↑</a></div></div></footer>
+    </main>
+
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top"><span id="dialog-kind" class="eyebrow"></span><button id="close-dialog" aria-label="Close project notes">✕</button></div>
+      <h2 id="dialog-title"></h2><p id="dialog-description"></p><ul id="dialog-notes"></ul><a id="dialog-repo" class="text-link" target="_blank" rel="noreferrer">Explore the repository ↗</a>
+    </dialog>
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

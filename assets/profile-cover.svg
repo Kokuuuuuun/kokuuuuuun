@@ -11,7 +11,9 @@
   <g transform="translate(971 73)" fill="none" stroke="#e6a373" stroke-width="2">
     <path d="M12 0H132V84Q132 126 90 126H42Q12 126 12 96V78" stroke-opacity=".2"/>
     <path d="M12 12H120V84Q120 114 90 114H42Q24 114 24 96V78" stroke-opacity=".45"/>
-    <path d="M12 24H108V84Q108 102 90 102H42Q36 102 36 96V78"/>
+    <path d="M12 24H108V84Q108 102 90 102H42Q36 102 36 96V78" pathLength="100" stroke-dasharray="100">
+      <animate attributeName="stroke-dashoffset" values="100;0;0;100" keyTimes="0;.3;.85;1" dur="12s" repeatCount="indefinite"/>
+    </path>
     <path d="M24 0V24M48 0V24M72 0V24M96 0V24M120 0V24M108 42H132M108 66H132M11 94H36M17 114L36 98M44 102V126M68 102V126M92 102V126M106 95L123 112" stroke-opacity=".4"/>
     <circle cx="12" cy="24" r="3" fill="#e6a373" stroke="none"/>
     <circle cx="36" cy="78" r="3" fill="#e6a373" stroke="none"/>
